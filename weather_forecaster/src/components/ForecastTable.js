@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styles/ForecastTable.css";
 import ForecastRow from "./ForecastRow";
+import data from "../data.json";
 
 class ForecastTable extends Component {
     render() {
@@ -10,15 +11,34 @@ class ForecastTable extends Component {
                     <tr>
                         <th scope="row"></th>
                         <td>
-                            <ForecastRow date="June 28th"/>
+                            <ForecastRow 
+                                date={data.list[0].dt}
+                                weather={data.list[0].weather[0].main}
+                                high={data.list[0].main.temp_max}
+                                low={data.list[0].main.temp_min}
+                            />
                         </td>
+                    </tr>
+                    <tr>
                         <th scope="row"></th>
                         <td>
-                            <ForecastRow />
+                            <ForecastRow
+                                date={data.list[1].dt}
+                                weather={data.list[1].weather[0].main}
+                                high={data.list[1].main.temp_max}
+                                low={data.list[1].main.temp_min}
+                            />
                         </td>
+                    </tr>
+                    <tr>
                         <th scope="row"></th>
                         <td>
-                            <ForecastRow />
+                            <ForecastRow
+                                date={data.list[2].dt}
+                                weather={data.list[2].weather[0].main}
+                                high={data.list[2].main.temp_max}
+                                low={data.list[2].main.temp_min}
+                            />
                         </td>
                     </tr>
                 </tbody>

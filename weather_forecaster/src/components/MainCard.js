@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../styles/MainCard.css";
 import ForecastTable from "./ForecastTable";
-import ForecastRow from "./ForecastRow";
 import MyFancyComponent from "./Map";
 import data from "../../src/data.json";
 
@@ -12,7 +11,7 @@ class MainCard extends Component {
                 <div className="row p-4">
                     <div className="col-5">
                         <div className="row">
-                            <h1>{data.location.city + "," + data.location.region}</h1>
+                            <h1>{data.city.name + "," + data.city.country}</h1>
                             <button type="button" className="btn btn-white btn-outline-dark">Remove</button>
                         </div>
                         <div className="row">
@@ -21,10 +20,16 @@ class MainCard extends Component {
                     </div>
                     <div className="col-7">
                         <div className="row float-right">
-                            <h4>Today</h4>
-                            <h5>{data.forecasts[0].text}</h5>
-                            <h2 className="high">High: {" " + data.forecasts[0].high}</h2>
-                            <h2 className="low">Low: {" " + data.forecasts[0].low}</h2>
+                            <ul>
+                                <li>
+                                    <h4>Today</h4>
+                                </li>
+                                <li>
+                                    <h5>{data.list[0].weather[0].main}</h5>
+                                </li>
+                            </ul>
+                            <h2 className="high">High: {" " + Math.floor(data.list[0].main.temp_max)}</h2>
+                            <h2 className="low">Low: {" " + Math.floor(data.list[0].main.temp_min)}</h2>
                         </div>
                         <div className="row">
                             <MyFancyComponent />
