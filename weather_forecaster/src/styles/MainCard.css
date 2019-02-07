@@ -1,3 +1,19 @@
 .container {
     background-color: white;
 }
+
+.btn {
+    height: 75%;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding-top: 2px;
+}
+
+.high {
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.low {
+    margin-left: 30px;
+}

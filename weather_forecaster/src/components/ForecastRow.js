@@ -3,13 +3,9 @@ import "../styles/ForecastRow.css";
 
 class ForecastRow extends Component {
     render() {
-        const location = this.props.location;
-        const weather = this.props.forecasts;
-
         return (
             <tr>
-                <td>{location}</td>
-                <td>{weather}</td>
+                <td>{this.props.date}</td>
             </tr>
         );
     }

@@ -10,7 +10,7 @@ class ForecastTable extends Component {
                     <tr>
                         <th scope="row"></th>
                         <td>
-                            <ForecastRow />
+                            <ForecastRow date="June 28th"/>
                         </td>
                         <th scope="row"></th>
                         <td>

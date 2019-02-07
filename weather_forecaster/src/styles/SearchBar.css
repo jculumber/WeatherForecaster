@@ -2,3 +2,13 @@ form {
     background-color: lightgrey;
     width: 100%;
 }
+
+.button-add {
+    width: 13%;
+    margin-bottom: 8px;
+}
+
+.inputbar {
+    height: 75%;
+    width: 40%
+}

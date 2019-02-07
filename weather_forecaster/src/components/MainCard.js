@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../styles/MainCard.css";
 import ForecastTable from "./ForecastTable";
 import ForecastRow from "./ForecastRow";
-//import MyFancyComponent from "./Map";
+import MyFancyComponent from "./Map";
 import data from "../../src/data.json";
 
 class MainCard extends Component {
@@ -17,20 +17,17 @@ class MainCard extends Component {
                         </div>
                         <div className="row">
                             <ForecastTable />
-                                {/* {this.state.data.map (row => (
-                                   <ForecastRow
-                                    key={row.id}
-                                    id={row.id}
-                                   /> 
-                                ))} */}
                         </div>
                     </div>
                     <div className="col-7">
-                        <div className="row">
-                            <h1>{data.forecasts[0].day}</h1>
+                        <div className="row float-right">
+                            <h4>Today</h4>
+                            <h5>{data.forecasts[0].text}</h5>
+                            <h2 className="high">High: {" " + data.forecasts[0].high}</h2>
+                            <h2 className="low">Low: {" " + data.forecasts[0].low}</h2>
                         </div>
                         <div className="row">
-                            
+                            <MyFancyComponent />
                         </div>
                     </div>
                 </div>
