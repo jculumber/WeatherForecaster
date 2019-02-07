@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../styles/MainCard.css";
 import ForecastTable from "./ForecastTable";
 import ForecastRow from "./ForecastRow";
-import MyFancyComponent from "./Map";
+//import MyFancyComponent from "./Map";
 import data from "../../src/data.json";
 
 class MainCard extends Component {
@@ -30,7 +30,7 @@ class MainCard extends Component {
                             <h1>{data.forecasts[0].day}</h1>
                         </div>
                         <div className="row">
-                            <MyFancyComponent />
+                            
                         </div>
                     </div>
                 </div>
