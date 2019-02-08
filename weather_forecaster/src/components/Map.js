@@ -4,7 +4,7 @@ import "../styles/Map.css";
 class Map extends Component {
     render() {
         return (
-            <div></div>
+            <div id="map"></div>
         );
     }
 };

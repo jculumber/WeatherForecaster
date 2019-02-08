@@ -1,17 +1,22 @@
 import React, { Component } from "react";
 import "../styles/ForecastRow.css";
+import Weather from "../utils/API-Yahoo_Weather"
+import data from "../data.json"
 
 class ForecastRow extends Component {
     render() {
         return (
             <tr>
+                <th scope="row"></th>
                 <td>
                     <ul>
                         <li>
                             {new Date((this.props.date * 1000)).toDateString()}
                         </li>
                         <li>
-                            {this.props.weather}
+                            <Weather 
+                                city={data.city.name}
+                                list={this.props.list}/>
                         </li>
                     </ul>
                 </td>

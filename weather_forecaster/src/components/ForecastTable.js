@@ -8,39 +8,24 @@ class ForecastTable extends Component {
         return (
             <table className="table">
                 <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>
-                            <ForecastRow 
-                                date={data.list[0].dt}
-                                weather={data.list[0].weather[0].main}
-                                high={data.list[0].main.temp_max}
-                                low={data.list[0].main.temp_min}
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>
-                            <ForecastRow
-                                date={data.list[1].dt}
-                                weather={data.list[1].weather[0].main}
-                                high={data.list[1].main.temp_max}
-                                low={data.list[1].main.temp_min}
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>
-                            <ForecastRow
-                                date={data.list[2].dt}
-                                weather={data.list[2].weather[0].main}
-                                high={data.list[2].main.temp_max}
-                                low={data.list[2].main.temp_min}
-                            />
-                        </td>
-                    </tr>
+                    <ForecastRow 
+                        date={data.list[0].dt}
+                        weather={data.list[0].weather[0].main}
+                        high={data.list[0].main.temp_max}
+                        low={data.list[0].main.temp_min}
+                    />
+                    <ForecastRow
+                        date={data.list[1].dt}
+                        weather={data.list[1].weather[0].main}
+                        high={data.list[1].main.temp_max}
+                        low={data.list[1].main.temp_min}
+                    />
+                    <ForecastRow
+                        date={data.list[2].dt}
+                        weather={data.list[2].weather[0].main}
+                        high={data.list[2].main.temp_max}
+                        low={data.list[2].main.temp_min}
+                    />
                 </tbody>
             </table>
         );

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../styles/MainCard.css";
 import ForecastTable from "./ForecastTable";
-import MyFancyComponent from "./Map";
+import Map from "./Map";
 import data from "../../src/data.json";
 
 class MainCard extends Component {
@@ -32,7 +32,10 @@ class MainCard extends Component {
                             <h2 className="low">Low: {" " + Math.floor(data.list[0].main.temp_min)}</h2>
                         </div>
                         <div className="row">
-                            <MyFancyComponent />
+                            <Map
+                                lat={data.city.coord.lat}
+                                lon={data.city.coord.lon}
+                            />
                         </div>
                     </div>
                 </div>
